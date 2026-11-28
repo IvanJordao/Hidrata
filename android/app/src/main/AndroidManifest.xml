@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "RG" do app: nome, ícone, telas e permissões. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Android 13+: permissão para mostrar notificações (o app pede ao usuário) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:label="Hidrata"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Hidrata">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Botões "Bebi 300 ml" e "Lembrar em 30 min" da notificação -->
+        <receiver
+            android:name=".notify.ActionReceiver"
+            android:exported="false" />
+    </application>
+</manifest>

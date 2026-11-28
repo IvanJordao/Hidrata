@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema base da janela (o visual de verdade é feito no Compose) -->
+    <style name="Theme.Hidrata" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/bg1</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+</resources>
